@@ -1,22 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prototype</title>
-    <script type="module" src="./app.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cuotas Norte — Demo BNPL (Caja Trujillo)</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="module" src="./app.js"></script>
 </head>
+
 <body>
-    <label for="amount">Amount:</label>
-    <input type="text" id="amount" name="amount">
-    <div id="status"></div>
-    <div id="summary"></div>
-    <div id="schedule"></div>
-    <button id="btnApprove">Approve</button>
-    <div class="options">
-        <button class="opt" data-months="3">3 Months</button>
-        <button class="opt" data-months="6">6 Months</button>
-        <button class="opt" data-months="12">12 Months</button>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div>
+        <div class="brand">Cuotas Norte</div>
+        <div class="subtitle">Demo BNPL (white‑label Caja Trujillo)</div>
+      </div>
+      <div class="badge">Primera cuota: 30 días</div>
     </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1 class="h1">Checkout</h1>
+      <p class="muted">Simula una compra con cuotas 3 / 6 / 12. Incluye fee simple en 6 y 12.</p>
+
+      <div class="grid">
+        <label class="field">
+          <span>Monto (S/)</span>
+          <input id="amount" inputmode="decimal" value="450" placeholder="450.00" />
+          <small class="hint">Editable. Ej.: 120, 450, 999.90</small>
+        </label>
+
+        <label class="field">
+          <span>DNI</span>
+          <input id="dni" inputmode="numeric" placeholder="12345678" />
+          <small class="hint">Demo: 8 dígitos. Cambia el último dígito para variar el resultado.</small>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="h2">Elige cuotas</h2>
+
+      <div class="options" role="group" aria-label="Opciones de cuotas">
+        <button class="opt" type="button" data-months="3">
+          <span class="opt__title">3 cuotas</span>
+          <span class="opt__meta">fee 0%</span>
+        </button>
+
+        <button class="opt" type="button" data-months="6">
+          <span class="opt__title">6 cuotas</span>
+          <span class="opt__meta">fee 4%</span>
+        </button>
+
+        <button class="opt" type="button" data-months="12">
+          <span class="opt__title">12 cuotas</span>
+          <span class="opt__meta">fee 9%</span>
+        </button>
+      </div>
+
+      <div class="actions">
+        <button id="btnApprove" class="primary" type="button">Simular aprobación</button>
+        <div class="note muted">
+          Consejo: ejecuta con servidor local: <code>python -m http.server 8080</code>
+        </div>
+      </div>
+
+      <div id="status" class="status"></div>
+    </section>
+
+    <section class="card">
+      <h2 class="h2">Resumen</h2>
+      <div id="summary" class="summary"></div>
+
+      <h2 class="h2" style="margin-top:16px;">Cronograma</h2>
+      <div id="schedule"></div>
+    </section>
+
+    <footer class="footer muted">
+      Pagos: App Caja Trujillo / Yape / Plin (conceptual). Sujeto a evaluación crediticia (demo).
+    </footer>
+  </main>
 </body>
 </html>
