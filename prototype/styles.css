@@ -1,0 +1,47 @@
+/* Mobile-first styling for Cuotas Norte BNPL checkout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+.installment-options {
+    margin: 20px 0;
+}
+
+.approved {
+    background-color: #DFF2BF;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.rejected {
+    background-color: #FFBABA;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.schedule-table th {
+    background-color: #f2f2f2;
+}
