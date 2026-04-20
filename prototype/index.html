@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>BNPL Prototype</title>
+    <title>Cuotas Norte BNPL Checkout</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.js"></script>
 </head>
 <body>
-    <h1>Welcome to Cuotas Norte - BNPL Prototype</h1>
-    <p>Demo purchase amount: S/ 450</p>
-    <p>Installment Options: 3, 6, 12 months</p>
-    <script src="app.js"></script>
+    <h1>Cuotas Norte BNPL Checkout</h1>
+    <p>Total a financiar: S/ 450</p>
+    <label for="installments">Seleccione cuotas:</label>
+    <select id="installments">
+        <option value="3">3 cuotas</option>
+        <option value="6">6 cuotas</option>
+        <option value="12">12 cuotas</option>
+    </select>
+    <label for="dni">Ingrese su DNI:</label>
+    <input type="text" id="dni" placeholder="DNI" />
+    <button id="btn-approve">Simular Aprobación</button>
+    <div id="approval-result"></div>
+    <script src="./app.js"></script>
 </body>
 </html>
