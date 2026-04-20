@@ -2,7 +2,9 @@
 
 Prototipo (PoC) para una solución **BNPL (Buy Now, Pay Later)** orientada a **Caja Trujillo**.
 
-> Estado actual: este repositorio está en etapa inicial. Aún no incluye código fuente ni instrucciones de ejecución.
+[▶ Ver Prototipo BNPL (simulación)](https://treevu-ai.github.io/bnpl-caja-trujillo-prototipo/prototype/)
+
+> Nota: Este demo es una **simulación** (sin integración real con Caja Trujillo / Yape / pasarelas). Sirve para validar UX y flujo.
 
 ## ¿Qué debería contener este prototipo?
 - **Frontend** (UI) para simular el flujo de compra BNPL.
